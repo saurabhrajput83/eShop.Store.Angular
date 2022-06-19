@@ -1,0 +1,92 @@
+<div class="container-fluid">
+  <div class="row mt-3">
+    <div class="col-md-2">
+      <img class="productDefaultImage"
+           src="{{product.imageUrl}}" />
+    </div>
+    <div class="col-md-10">
+      <h2>{{product.productName}}</h2>
+      <div class="lineitem">
+        <strong>Item Number: </strong>
+        <i>{{product.modelNumber}}</i>
+      </div>
+      <div class="lineitem">
+        This Product is
+        <strong class="text-success">in Stock</strong>
+      </div>
+      <div class="lineitem">
+        <strong>Brand: </strong>
+        <i>{{(product.brand)?product.brand.brandName:''}}</i>
+      </div>
+      <div class="lineitem">
+        <i>{{product.productSummary}}</i>
+      </div>
+      <mat-tab-group mat-align-tabs="start"
+                     animationDuration="0ms">
+        <mat-tab label="Product Information">
+          <h2>Product Description</h2>
+          <p>{{product.productDescription}}</p>
+        </mat-tab>
+        <mat-tab label="Product Reviews">
+          <h2>Product Reviews</h2>
+        </mat-tab>
+        <mat-tab label="Related Products">
+          <h2>Related Products</h2>
+        </mat-tab>
+      </mat-tab-group>
+      <hr />
+      <div class="lineitem">
+        <strong>List Price: </strong>
+        <i class="text-decoration-line-through">
+          {{product.listPrice | currency: 'USD'}}
+        </i>
+      </div>
+      <div class="lineitem">
+        <strong>Selling Price: </strong>
+        <i>{{product.sellingPrice | currency: 'USD'}}</i>
+      </div>
+      <table class="table table-sm table-bordered" style="width:300px">
+        <thead>
+          <tr>
+            <th colspan="2">
+              Product Specifications Information:
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Weight</td>
+            <td>{{product.weight}}</td>
+          </tr>
+          <tr>
+            <td>Height</td>
+            <td>{{product.height}}</td>
+          </tr>
+          <tr>
+            <td>Length</td>
+            <td>{{product.length}}</td>
+          </tr>
+          <tr>
+            <td>Breadth</td>
+            <td>{{product.breadth}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="lineitem">
+        <strong>Quantity: </strong>
+        <input type="number"
+               max="10"
+               min="1"
+               style="width:50px;"
+               [(ngModel)]="productQty" />
+        &nbsp;
+        <button type="button"
+                class="btn btn-primary"
+                (click)="addToCart()">
+          Buy
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

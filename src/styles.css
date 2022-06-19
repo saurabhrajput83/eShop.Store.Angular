@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body {
+    color: Black;
+    font-family: Verdana, Arial, sans-serif;
+    font-weight: normal;
+    font-size: 8pt;
+    font: normal 12px/24px "Segoe UI", Arial, sans-serif;
+  }
+  
+  .layoutitem {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  
+  .lineitem {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  
+  
+  .card-img img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .productDefaultImage {
+    width: 200px;
+    height: 300px;
+  }
+  
+  .product-view {
+    height: 250px;
+  }
+  

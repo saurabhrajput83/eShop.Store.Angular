@@ -1,0 +1,8 @@
+<ul class="list-group  mt-3">
+  <li class="list-group-item bg-light">{{listTitle}}</li>
+  <li class="list-group-item" *ngFor="let item of list">
+    <a class="list-group-item-action"
+       href="{{item.NavUrl}}">{{item.NavName}}</a>
+  </li>
+</ul>
+

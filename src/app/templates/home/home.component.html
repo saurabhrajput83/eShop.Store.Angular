@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <app-links-vertical-list [listTitle]="shopByBrandListTitle"
+                               [list]="shopByBrandList"></app-links-vertical-list>
+      <app-links-vertical-list [listTitle]="shopByDepartmentListTitle"
+                               [list]="shopByDepartmentList"></app-links-vertical-list>
+    </div>
+    <div class="col-md-8">
+      <app-products-horizontal-list listTitle="Featured Products"
+                                    [list]="featuredProducts">
+      </app-products-horizontal-list>
+      <app-products-horizontal-list listTitle="New Products"
+                                    [list]="newProducts">
+      </app-products-horizontal-list>
+    </div>
+    <div class="col-md-2">
+      <app-myacccont-mini></app-myacccont-mini>
+      <app-shoppingcart-mini></app-shoppingcart-mini>
+    </div>
+  </div>
+</div>

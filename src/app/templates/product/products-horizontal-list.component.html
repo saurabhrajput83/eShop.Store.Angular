@@ -1,0 +1,29 @@
+<div class="card  mt-3">
+  <div class="card-header">
+    {{listTitle}}
+  </div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-3" *ngFor="let product of list">
+        <div class="card product-view mt-3">
+          <div class="card-body text-center">
+            <div class="card-img">
+              <img src="{{product.imageUrl}}" />
+            </div>
+            <h6 class="card-title">
+              <a routerLink="/productdetails/{{product.productId}}">
+                {{product.productName}}
+              </a>
+            </h6>
+            <p class="card-subtitle text-muted text-decoration-line-through">
+              {{ product.listPrice | currency:'USD'}}
+            </p>
+            <p class="card-subtitle">
+              {{ product.sellingPrice | currency:'USD'}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
